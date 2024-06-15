@@ -18,8 +18,14 @@ body {
 .modal {
   background: white;
   width: 480px;
+  height: auto;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: space-between;
+  gap :20px;
 }
 
 .icon {
@@ -31,9 +37,18 @@ body {
   height: 42px;
   border-radius: 50%;
   display: flex;
-  align-items: center;
+  /* align-items: first baseline; */
   justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
 }
+
+.content {
+  flex-grow: 1;
+  flex-shrink: 20;
+  gap: 20px;
+}
+
 
 .close-button {
   background: #eee;
@@ -48,6 +63,31 @@ body {
   justify-content: center;
   border: 1px solid #eee;
   padding: 0;
+}
+
+.header-close {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  flex-shrink: 2;
+  /* flex-direction: column; */
+}
+.header {
+  font-weight: bold;
+  flex-grow: 2;
+  margin-bottom: 20px;
+}
+
+
+.text-and-buttons {
+  flex: 1 2 auto;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.text {
+  margin-bottom: 20px;
 }
 
 button {
